@@ -27,7 +27,7 @@ Screenshot of the deployed app:
 
 ![Screenshot of app deployed at Heroku](assets/screenshot01.jpg?raw=true)
 
-Link to deployed app on Heroku: https://agile-temple-75211.herokuapp.com/notes
+Link to deployed app on Heroku: https://agile-temple-75211.herokuapp.com/
 
 ## License
 
