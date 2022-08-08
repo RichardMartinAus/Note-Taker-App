@@ -20,7 +20,7 @@ notes.post('/', (req, res) => {
   const { title, text } = req.body;
 
   if (req.body) {
-    const noteNew = {
+    const note = {
       title,
       text,
       note_id: uuidv4(),
@@ -30,13 +30,14 @@ notes.post('/', (req, res) => {
       if (err) {
         console.log(err);
       } else {
-        let newNotes = JSON.parse(data);
-        newNotes.push(noteNew);
-        fs.writeFile('./db/db.json', JSON.stringify(newNotes), (err) => {
+        let newNote = JSON.parse(data);
+        newNote.push(note);
+        fs.writeFile('./db/db.json', JSON.stringify(newNote), (err) => {
           if (err) {
             console.log(err);
           } else {
-            res.json(newNotes);
+            res.json(newNote);
+            console.log('New note succesfully added!');
           }
         });
       }
